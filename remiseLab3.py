@@ -15,7 +15,7 @@ def integration(f, a, b, N):
     area = np.sum(fx)*(b-a)/N
     return area
     
-print 'Question 1 : Voir graphiques '
+print('Question 1 : Voir graphiques ')
 #PV
 #Ligne 1
 q=float(273)/373
@@ -93,7 +93,7 @@ fig1.text(0.04, 0.5, 'Temperature (K)', va='center', rotation='vertical')
 lc = mc.LineCollection(lignes,colors=cmap,  linewidths=2)
 ax2.add_collection(lc)
 ax2.autoscale()
-print 'Question 2 '
+print('Question 2 ')
 f1 = lambda x: 20*8.31*(100+273)/x
 i1= integration(f1,0.00025,vfinal,100)
 
@@ -109,6 +109,6 @@ i4= integration(f4,0.00025,v4,100)
 wnet=i1+i2-i3-i4
 efficiency=wnet/i1
 eff_carnot=1-float(273)/373
-print 'Rendement théorique de Carnot : ' , eff_carnot
-print 'Rendement de la machine selon les diagrammes de phase : ' , efficiency
-print "Il est clair que les deux résultats sont les mêmes, puisque le cycle étudié est un cycle de Carnot, les deux rendements concordent forcément."
+print('Rendement théorique de Carnot : ' , eff_carnot)
+print('Rendement de la machine selon les diagrammes de phase : ' , efficiency)
+print("Il est clair que les deux résultats sont les mêmes, puisque le cycle étudié est un cycle de Carnot, les deux rendements concordent forcément.")
